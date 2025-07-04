@@ -1,116 +1,33 @@
-# 🧑‍💼 Job Portal API (Core Django - No DRF)
+# 🧩 Django APIs – Job Portal & Blog System (No DRF)
 
-This is a backend API for a Job Portal system built using **Core Django** (without Django REST Framework). It allows companies to post jobs and applicants to apply via clean JSON APIs.
+This repository contains two Django backend projects (without Django REST Framework):
 
----
+- ✅ **Task 1:** Job Portal API (Companies post jobs, users apply)
+- ✅ **Task 2:** Blog + Comment System (Users register/login, post blogs, comment)
 
-## 🚀 Features
-
-- Companies can create job postings
-- Applicants can apply for jobs
-- View all job listings
-- View applicants per job
-- Built using **function-based views** and `JsonResponse`
-- ✅ No DRF or serializers used
+Both use **function-based views**, **JsonResponse**, and Django’s built-in features only.
 
 ---
 
-## 🛠️ Tech Stack
+## 🔧 Tech Stack
 
 - Python 3.10+
-- Django (without DRF)
-- SQLite (default database)
-- JSON APIs using `JsonResponse`
+- Django (No DRF)
+- SQLite DB
+- JsonResponse API responses
+- Django Auth System (Task 2)
 
 ---
 
-## ⚙️ Setup Instructions
+## 🚀 Setup (Same for Both)
 
-### 1. Clone the Repository
+```bash
+git clone https://github.com/your-username/django-api-projects.git
+cd django-api-projects
 
-
-git clone https://github.com/your-username/job-portal-api.git
-cd job-portal-api
-
-
-
-2. Create Virtual Environment
-bash
-Copy
-Edit
 python -m venv venv
-# Activate:
-# On Windows
-venv\Scripts\activate
-# On Mac/Linux
-source venv/bin/activate
-3. Install Dependencies
-bash
-Copy
-Edit
+venv\Scripts\activate  # or source venv/bin/activate
+
 pip install -r requirements.txt
-4. Run Migrations
-bash
-Copy
-Edit
 python manage.py migrate
-5. Run Development Server
-bash
-Copy
-Edit
 python manage.py runserver
-📂 API Endpoints
-✅ POST /api/create-company/
-Request Body:
-
-json
-Copy
-Edit
-{
-  "name": "Google",
-  "location": "Bangalore",
-  "description": "Tech company"
-}
-✅ POST /api/post-job/
-Request Body:
-
-json
-Copy
-Edit
-{
-  "company_id": 1,
-  "title": "Backend Developer",
-  "description": "Experience with Django",
-  "salary": 60000,
-  "location": "Remote"
-}
-✅ GET /api/jobs/
-Returns a list of all job posts along with company names.
-
-✅ POST /api/apply/
-Request Body:
-
-json
-Copy
-Edit
-{
-  "name": "John Doe",
-  "email": "john@doe.com",
-  "resume_link": "https://example.com/resume.pdf",
-  "job_id": 3
-}
-✅ GET /api/applicants/<job_id>/
-Returns the list of applicants for a specific job.
-
-⚠️ Constraints
-❌ No Django REST Framework
-
-✅ Only function-based views used
-
-✅ JSON responses using JsonResponse
-
-✅ Basic error handling implemented
-
-✅ SQLite used as default database
-
-
