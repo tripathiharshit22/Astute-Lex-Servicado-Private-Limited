@@ -28,7 +28,7 @@ This is a backend API for a Job Portal system built using **Core Django** (witho
 
 ### 1. Clone the Repository
 
-```bash
+
 git clone https://github.com/your-username/job-portal-api.git
 cd job-portal-api
 
